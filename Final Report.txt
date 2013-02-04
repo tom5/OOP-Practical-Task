@@ -1,0 +1,19 @@
+I placed the initialisation code in the main method of the ApplicationFrame class as suggested, because then it will run on startup, as required.
+
+I implemented a static 'getInstance()' method in the LayoutApp class so that any class could access the LayoutApp instance easily, without creating multiple objects. I chose not to put it in the ApplicationFrame because I wanted to keep the model and view classes separate.
+
+I decided to name the issue selection dialog (referred to as class X in the assignment) IssueChooserDialog, as this seemed to make it's purpose obvious, as well as to illustrate the fact that it inherits from JDialog.
+
+I initialised this class in it's constructor, as hinted.
+
+I registered all my action listeners as inner classes in the obvious way.
+
+I extended the ApplicationFrame with a 'choose issue' button in the same place all the other buttons were intitialised.
+
+The class labelled as Y that extended AbstractTableModel, I called IssueArchiveTableManager.
+
+If there is no selected issue, I modified the PageView class so that it draws 'there is no currently selected issue'. I also altered the initialisation of the program so that it is initialised with no currently selected issue.
+
+I named the class z 'NewIssueDialog'.
+
+Finally, even if the steps advised are taken to avoid memory leaks, if the dialog box is closed using the cross in the top left corner, the 'WindowClosing()' method is called, not the 'WindowClosed()' method, so that needs to be overridden too.
